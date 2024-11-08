@@ -1,9 +1,21 @@
+
+
 .my-d-none{
     display: none;
 }
 .my-container{
     max-width: 800px;
 }
+.my-container h2{
+    text-align: center;
+}
 .my-padding-button{
     padding: 0px 30px;
+}
+.my-container form{
+    border-radius: 10px;
+}
+#ticket{
+    border-radius: 10px;
+    font-weight: bold;
 }
