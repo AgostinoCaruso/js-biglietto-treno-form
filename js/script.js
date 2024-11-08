@@ -24,8 +24,12 @@ const carriageTicket = document.getElementById("carriageTicket");
 const priceTicket = document.getElementById("priceTicket");
 
 //Other stuff
-formLogin.style.backgroundColor ="green";
-ticketPanel.style.backgroundColor = "red";
+formLogin.style.backgroundColor ="#615a58";
+ticketPanel.style.backgroundColor = "#47445a";
+
+document.body.classList.add(".backgroundImage");
+
+
 formLogin.addEventListener("submit",function (event){
     event.preventDefault();
     
@@ -39,7 +43,6 @@ formLogin.addEventListener("submit",function (event){
 resetForm,addEventListener("reset", () => {
     ticketPanel.classList.add(dNone);
     ticketH2Panel.classList.add(dNone);
-
     RemoveInnerHtml();
 })
 
@@ -56,8 +59,8 @@ function AddValueToHtml(){
     }else{
         discountTicket.innerHTML = "Full price";
     }
-    
-    priceTicket.innerHTML = parseInt(finalPrice).toFixed(2)+ "€";
+
+    priceTicket.innerHTML = parseFloat(finalPrice).toFixed(2)+ "€";
     carriageTicket.innerHTML = Math.floor(Math.random()*100+1);
 }
 function RemoveInnerHtml(){
@@ -86,7 +89,7 @@ console.clear();
 
 function Operation(){
 //check how much does it cost
-//finalPrice = (priceTicketKm * parseInt(kmTrip.value)).toFixed(2); //final price before discount
+finalPrice = (priceTicketKm * parseFloat(kmTrip.value)).toFixed(2); //final price before discount
 
 //if statement
 if (ageSelected.value == "junior") {
@@ -95,7 +98,7 @@ if (ageSelected.value == "junior") {
 else if (ageSelected.value =="old") {
     CalculateDiscountPrice(discountSenior);
 } else {
-    finalPrice = (priceTicketKm * parseInt(kmTrip.value)).toFixed(2); //final price before discount
+    finalPrice = (priceTicketKm * parseFloat(kmTrip.value)).toFixed(2); //final price before discount
     console.log(`The final cost is: ${finalPrice}€, unfortunatelly at your age of ${ageSelected.value} you cannot access to a discount price!\n
 Your data for this travel is: age:${ageSelected.value}, km: ${kmTrip.value}, final price is: ${finalPrice}€!!`);
 }
