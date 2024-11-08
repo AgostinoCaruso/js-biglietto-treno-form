@@ -1,16 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+        integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="./css/style.css">
     <title>Biglietto Treno</title>
 </head>
-<body>
-    
 
+<body>
+    <main>
+        <div class="container-sm">
+            <form class="mt-5" id="login">
+                <div class="row">
+                    <div class="mb-3 col-5">
+                        <label for="clientName" class="form-label">Write your name and surname</label>
+                        <input type="text" class="form-control" id="clientName" placeholder="Name">
+                    </div>
+                    <div class="pt-2 mb-3 col-5 ">
+                        <label for="surname" class="form-label"></label>
+                        <input type="text" class="form-control" id="surname" placeholder="Surname">
+                    </div>
+                    <div class="mt-2 mb-2 col-4">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Select your age</option>
+                            <option value="junior"> less than 17 </option>
+                            <option value="senior"> over 18 </option>
+                            <option value="old"> over 65 </option>
+                          </select>
+                    </div>
+                    <div class="pt-2 mb-3 col-4">
+                        <input type="number" class="form-control" id="km" aria-describedby="emailHelp" placeholder="Km of trip">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                    <div class="col-1">
+                        <button type="reset" class="btn btn-danger">Reset</button>
+                    </div>
+                </div>
+                
+            </form>
+        </div>
+    </main>
     <script src="./js/script.js"></script>
 </body>
+
 </html>
