@@ -14,39 +14,57 @@
 
 <body>
     <main>
-        <div class="container-sm">
+        <div class="container-sm my-container">
             <form class="mt-5" id="login">
-                <div class="row">
-                    <div class="mb-3 col-5">
-                        <label for="clientName" class="form-label">Write your name and surname</label>
+                <div class="d-flex justify-content-between p-5 row">
+                    <div class="col-4">
                         <input type="text" class="form-control" id="clientName" placeholder="Name">
                     </div>
-                    <div class="pt-2 mb-3 col-5 ">
-                        <label for="clientSurname" class="form-label"></label>
-                        <input type="text" class="form-control" id="clientSurname" placeholder="Surname">
-                    </div>
-                    <div class="mt-2 mb-2 col-4">
+                    <div class="col-4">
                         <select class="form-select" aria-label="Default select example" id="ageSelector">
                             <option selected>Select your age</option>
                             <option value="junior"> less than 17 </option>
                             <option value="senior"> over 18 </option>
                             <option value="old"> over 65 </option>
-                          </select>
+                        </select>
                     </div>
-                    <div class="pt-2 mb-3 col-4">
-                        <input type="number" class="form-control" id="km" aria-describedby="emailHelp" placeholder="Km of trip">
+                    <div class="col-4">
+                        <input type="number" class="form-control" id="km" aria-describedby="emailHelp"
+                            placeholder="Km of trip">
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-1">
+                <div class="d-flex justify-content-center pb-5 row">
+                    <div class="my-padding-button col-3">
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
-                    <div class="col-1">
-                        <button type="reset" class="btn btn-danger">Reset</button>
+                    <div class="my-padding-button col-3">
+                        <button type="reset" class="btn btn-danger" id="reset">Reset</button>
                     </div>
                 </div>
-                
             </form>
+
+            <div class="row mt-5 my-d-none" id="ticket">
+                <div class="mb-3 col-5">
+                    <label for="clientName" class="form-label">Write your name and surname</label>
+                    <input type="text" class="form-control" id="clientName" placeholder="Name">
+                </div>
+                <div class="pt-2 mb-3 col-5 ">
+                    <label for="clientSurname" class="form-label"></label>
+                    <input type="text" class="form-control" id="clientSurname" placeholder="Surname">
+                </div>
+                <div class="mt-2 mb-2 col-4">
+                    <select class="form-select" aria-label="Default select example" id="ageSelector">
+                        <option selected>Select your age</option>
+                        <option value="junior"> less than 17 </option>
+                        <option value="senior"> over 18 </option>
+                        <option value="old"> over 65 </option>
+                    </select>
+                </div>
+                <div class="pt-2 mb-3 col-4">
+                    <input type="number" class="form-control" id="km" aria-describedby="emailHelp"
+                        placeholder="Km of trip">
+                </div>
+            </div>
         </div>
     </main>
     <script src="./js/script.js"></script>

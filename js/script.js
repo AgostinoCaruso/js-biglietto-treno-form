@@ -2,19 +2,33 @@
 console.clear();
 
 //variables of HTML
+const myContainer = document.querySelector(".my-container");
+//LOGIN
 const formLogin = document.getElementById("login");
 
 const clientName = document.getElementById("clientName");
-const clientSurname = document.getElementById("clientSurname")
+// const clientSurname = document.getElementById("clientSurname")
 const ageSelected = document.getElementById("ageSelector");
 const kmTrip = document.getElementById("km");
+const resetForm = document.getElementById("reset");
+//TICKET
+const ticketPanel = document.getElementById("ticket");
 
 
+
+
+
+//Other stuff
+formLogin.style.backgroundColor ="green";
+ticketPanel.style.backgroundColor = "red";
 formLogin.addEventListener("submit",function (event){
     event.preventDefault();
-
+    
     Operation();
+    ticketPanel.classList.remove("my-d-none");
 });
+//reset form and remove ticket panel
+resetForm,addEventListener("reset", () => ticketPanel.classList.add("my-d-none"));
 
 
 //----------------------------------------------------------------------------------------

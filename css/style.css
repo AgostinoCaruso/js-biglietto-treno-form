@@ -1,0 +1,9 @@
+.my-d-none{
+    display: none;
+}
+.my-container{
+    max-width: 800px;
+}
+.my-padding-button{
+    padding: 0px 30px;
+}
